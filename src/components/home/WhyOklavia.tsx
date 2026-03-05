@@ -35,13 +35,13 @@ export default function WhyOklavia() {
       <div className="absolute -top-32 -right-32 w-96 h-96 rounded-full border border-gold-500/[0.04]" />
       <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full border border-gold-500/[0.03]" />
 
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-gold-500/[0.02] rounded-full blur-[100px]" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-100 bg-gold-500/2 rounded-full blur-[100px]" />
 
       <div className="relative mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
         <AnimateIn className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-6">
             <OttomanTulip size={16} className="opacity-40" />
-            <div className="inline-flex items-center gap-3 px-5 py-1.5 rounded-full border border-gold-500/15 bg-gold-500/[0.03]">
+            <div className="inline-flex items-center gap-3 px-5 py-1.5 rounded-full border border-gold-500/15 bg-gold-500/3">
               <span className="text-gold-500/70 text-xs font-medium tracking-[0.2em] uppercase">Neden Biz?</span>
             </div>
             <OttomanTulip size={16} className="opacity-40 -scale-x-100" />
@@ -58,9 +58,9 @@ export default function WhyOklavia() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, i) => (
             <AnimateIn key={feature.title} delay={i * 0.08}>
-              <div className={`group relative rounded-2xl border border-gold-500/[0.08] bg-gradient-to-br ${feature.accent} to-navy-900/50 p-8 h-full hover:border-gold-500/20 transition-all duration-500 overflow-hidden`}>
+              <div className={`group relative rounded-2xl border border-gold-500/8 bg-gradient-to-br ${feature.accent} to-navy-900/50 p-8 h-full hover:border-gold-500/20 transition-all duration-500 overflow-hidden`}>
                 {/* Hover glow */}
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gold-500/[0.03] rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gold-500/3 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
                 <div className="relative">
                   {/* Icon */}

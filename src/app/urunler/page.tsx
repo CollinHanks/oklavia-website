@@ -44,11 +44,11 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
 
           <div className={`grid grid-cols-1 lg:grid-cols-2 `}>
             {/* Image */}
-            <div className={`aspect-video sm:aspect-[4/3] lg:aspect-auto lg:min-h-[400px] bg-gradient-to-br from-navy-700/80 via-navy-800 to-navy-900 relative overflow-hidden `}>
+            <div className={`aspect-video sm:aspect-[4/3] lg:aspect-auto lg:min-h-100 bg-gradient-to-br from-navy-700/80 via-navy-800 to-navy-900 relative overflow-hidden `}>
               {/* Pattern overlay */}
 
               {/* Center glow */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gold-500/[0.06] rounded-full blur-[60px] group-hover:w-64 group-hover:h-64 group-hover:bg-gold-500/[0.1] transition-all duration-700" />
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gold-500/6 rounded-full blur-[60px] group-hover:w-64 group-hover:h-64 group-hover:bg-gold-500/[0.1] transition-all duration-700" />
 
               {/* Product image */}
               <div className="absolute inset-0 flex items-center justify-center">
@@ -110,7 +110,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
                       className={`px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-300 ${
                         selectedSize === size.value && !customAmount
                           ? 'bg-gold-500/15 border-gold-400/60 text-gold-300 border shadow-md shadow-gold-500/5'
-                          : 'border border-gold-500/10 text-cream-200/50 hover:border-gold-500/25 hover:text-gold-400 hover:bg-gold-500/[0.03]'
+                          : 'border border-gold-500/10 text-cream-200/50 hover:border-gold-500/25 hover:text-gold-400 hover:bg-gold-500/3'
                       }`}
                     >
                       {size.label}
@@ -146,7 +146,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
               {/* Expandable details */}
               <button
                 onClick={() => setShowDetails(!showDetails)}
-                className="flex items-center justify-between w-full py-3.5 border-t border-gold-500/[0.08] text-cream-200/40 text-sm hover:text-gold-400 transition-colors"
+                className="flex items-center justify-between w-full py-3.5 border-t border-gold-500/8 text-cream-200/40 text-sm hover:text-gold-400 transition-colors"
               >
                 <span className="flex items-center gap-2">
                   <Info size={14} />
@@ -206,7 +206,7 @@ export default function UrunlerPage() {
         <AnimateIn className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-6">
             <OttomanTulip size={16} className="opacity-40" />
-            <div className="inline-flex items-center gap-3 px-5 py-1.5 rounded-full border border-gold-500/15 bg-gold-500/[0.03]">
+            <div className="inline-flex items-center gap-3 px-5 py-1.5 rounded-full border border-gold-500/15 bg-gold-500/3">
               <span className="text-gold-500/70 text-xs font-medium tracking-[0.2em] uppercase">Ürünlerimiz</span>
             </div>
             <OttomanTulip size={16} className="opacity-40 -scale-x-100" />
@@ -230,7 +230,7 @@ export default function UrunlerPage() {
         {/* Bottom CTA */}
         <AnimateIn className="text-center mt-14">
           <div className="card-premium rounded-3xl p-10 sm:p-14 relative overflow-hidden">
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-32 bg-gold-500/[0.04] rounded-full blur-[60px]" />
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-64 h-32 bg-gold-500/4 rounded-full blur-[60px]" />
             <div className="relative">
               <h2 className="font-heading font-bold text-2xl sm:text-3xl text-cream-50 mb-3">
                 Özel Sipariş mi Vermek İstiyorsunuz?

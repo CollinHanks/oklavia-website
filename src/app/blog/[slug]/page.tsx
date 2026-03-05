@@ -138,7 +138,7 @@ export default function BlogDetailPage() {
         </AnimateIn>
 
         <AnimateIn delay={0.3}>
-          <div className="mt-12 pt-6 border-t border-gold-500/[0.08]">
+          <div className="mt-12 pt-6 border-t border-gold-500/8">
             <div className="card-premium rounded-2xl p-6 sm:p-8 text-center">
               <h3 className="font-heading font-bold text-xl text-cream-50 mb-2">Bu yazıyı beğendiniz mi?</h3>
               <p className="text-cream-200/40 text-sm mb-6">OKLAVİA ürünlerini keşfedin.</p>

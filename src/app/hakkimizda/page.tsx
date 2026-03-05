@@ -49,7 +49,7 @@ export default function HakkimizdaPage() {
         <AnimateIn className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-6">
             <OttomanTulip size={16} className="opacity-40" />
-            <div className="inline-flex items-center gap-3 px-5 py-1.5 rounded-full border border-gold-500/15 bg-gold-500/[0.03]">
+            <div className="inline-flex items-center gap-3 px-5 py-1.5 rounded-full border border-gold-500/15 bg-gold-500/3">
               <span className="text-gold-500/70 text-xs font-medium tracking-[0.2em] uppercase">Hakkımızda</span>
             </div>
             <OttomanTulip size={16} className="opacity-40 -scale-x-100" />
@@ -85,7 +85,7 @@ export default function HakkimizdaPage() {
 
             {/* Story content */}
             <div className="p-6 sm:p-8 lg:p-10 relative">
-              <div className="absolute top-0 right-0 w-72 h-72 bg-gold-500/[0.03] rounded-full blur-[100px]" />
+              <div className="absolute top-0 right-0 w-72 h-72 bg-gold-500/3 rounded-full blur-[100px]" />
 
               <div className="relative space-y-5 text-cream-200/55 text-[15px] leading-[1.85]">
                 <p>
@@ -152,7 +152,7 @@ export default function HakkimizdaPage() {
           <div className="text-center mb-10">
             <div className="flex items-center justify-center gap-3 mb-4">
               <OttomanTulip size={14} className="opacity-40" />
-              <div className="inline-flex items-center gap-3 px-5 py-1.5 rounded-full border border-gold-500/15 bg-gold-500/[0.03]">
+              <div className="inline-flex items-center gap-3 px-5 py-1.5 rounded-full border border-gold-500/15 bg-gold-500/3">
                 <Star size={12} className="text-gold-500/60" />
                 <span className="text-gold-500/70 text-xs font-medium tracking-[0.2em] uppercase">Yolculuğumuz</span>
               </div>

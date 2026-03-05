@@ -35,31 +35,31 @@ export default function HeroSection() {
       </motion.div>
 
       {/* Glows */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[600px] bg-gold-500/[0.04] rounded-full blur-[120px]" />
-      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-navy-600/20 rounded-full blur-[100px]" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-gold-600/[0.03] rounded-full blur-[100px]" />
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-225 h-150 bg-gold-500/4 rounded-full blur-[120px]" />
+      <div className="absolute top-0 left-0 w-100 h-100 bg-navy-600/20 rounded-full blur-[100px]" />
+      <div className="absolute bottom-0 right-0 w-100 h-100 bg-gold-600/3 rounded-full blur-[100px]" />
 
       {/* Floating dots */}
       {[
-        { top: '15%', left: '8%', delay: 0 },
-        { top: '25%', right: '15%', delay: 1 },
-        { top: '60%', left: '12%', delay: 2 },
-        { top: '75%', right: '8%', delay: 0.5 },
-        { top: '40%', left: '5%', delay: 1.5 },
+        { top: '15%', left: '8%', right: undefined, delay: 0 },
+        { top: '25%', left: undefined, right: '15%', delay: 1 },
+        { top: '60%', left: '12%', right: undefined, delay: 2 },
+        { top: '75%', left: undefined, right: '8%', delay: 0.5 },
+        { top: '40%', left: '5%', right: undefined, delay: 1.5 },
       ].map((dot, i) => (
-        <motion.div key={i} animate={{ opacity: [0.2, 0.6, 0.2], y: [0, -15, 0] }} transition={{ duration: 4, repeat: Infinity, delay: dot.delay }} className="absolute w-[3px] h-[3px] rounded-full bg-gold-500" style={{ top: dot.top, left: dot.left, right: (dot as Record<string, string>).right } as React.CSSProperties} />
+        <motion.div key={i} animate={{ opacity: [0.2, 0.6, 0.2], y: [0, -15, 0] }} transition={{ duration: 4, repeat: Infinity, delay: dot.delay }} className="absolute w-0.75 h-0.75 rounded-full bg-gold-500" style={{ top: dot.top, left: dot.left, right: dot.right }} />
       ))}
 
       {/* Decorative vertical lines */}
       <div className="absolute top-0 left-1/4 w-px h-32 bg-gradient-to-b from-transparent via-gold-500/10 to-transparent" />
-      <div className="absolute bottom-0 left-1/3 w-px h-40 bg-gradient-to-t from-transparent via-gold-500/[0.06] to-transparent" />
+      <div className="absolute bottom-0 left-1/3 w-px h-40 bg-gradient-to-t from-transparent via-gold-500/6 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 text-center">
         <motion.div initial={{ scaleX: 0, opacity: 0 }} animate={{ scaleX: 1, opacity: 1 }} transition={{ duration: 1.2 }} className="mx-auto w-48 h-px bg-gradient-to-r from-transparent via-gold-500/50 to-transparent mb-8" />
 
         {/* Badge */}
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="inline-flex items-center gap-3 px-6 py-2 rounded-full border border-gold-500/20 bg-gold-500/[0.05] mb-10">
+        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="inline-flex items-center gap-3 px-6 py-2 rounded-full border border-gold-500/20 bg-gold-500/5 mb-10">
           <span className="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse" />
           <span className="text-gold-400/90 text-xs font-medium tracking-[0.2em] uppercase">{SITE_CONFIG.foundedYear}&apos;den beri geleneksel lezzetler</span>
           <span className="w-1.5 h-1.5 rounded-full bg-gold-400 animate-pulse" />
@@ -78,9 +78,9 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Slogan */}
-        <motion.h2 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="font-heading font-semibold text-lg sm:text-xl md:text-2xl lg:text-3xl lg:text-4xl leading-tight mb-3 text-cream-50 px-2">
+        <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.4 }} className="font-heading font-semibold text-lg sm:text-xl md:text-2xl lg:text-4xl leading-tight mb-3 text-cream-50 px-2">
           Anadolu&apos;nun Mirası,{' '}<span className="text-gold-400">Sofralarınızın Tacı</span>
-        </motion.h2>
+        </motion.h1>
 
         <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.55 }} className="text-cream-200/50 text-sm sm:text-base max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed px-4">
           El yapımı su böreği, tereyağlı su böreği, fıstıklı baklava ve geleneksel Türk kahvesi. Yüzyıllık tarifler, modern sofralar için özenle hazırlanır.

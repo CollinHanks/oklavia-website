@@ -24,7 +24,7 @@ export default function DeliveryInfo() {
         <AnimateIn className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-6">
             <OttomanTulip size={16} className="opacity-40" />
-            <div className="inline-flex items-center gap-3 px-5 py-1.5 rounded-full border border-gold-500/15 bg-gold-500/[0.03]">
+            <div className="inline-flex items-center gap-3 px-5 py-1.5 rounded-full border border-gold-500/15 bg-gold-500/3">
               <span className="text-gold-500/70 text-xs font-medium tracking-[0.2em] uppercase">Teslimat</span>
             </div>
             <OttomanTulip size={16} className="opacity-40 -scale-x-100" />
@@ -44,7 +44,7 @@ export default function DeliveryInfo() {
         <AnimateIn>
           <div className="card-premium rounded-3xl p-6 sm:p-8 relative overflow-hidden mb-12">
             {/* Background effects */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/[0.02] rounded-full blur-[100px]" />
+            <div className="absolute top-0 right-0 w-96 h-96 bg-gold-500/2 rounded-full blur-[100px]" />
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-cyan-500/[0.02] rounded-full blur-[80px]" />
 
             <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
@@ -113,7 +113,7 @@ export default function DeliveryInfo() {
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {deliveryFeatures.map((item, i) => (
                   <AnimateIn key={item.title} delay={i * 0.06} direction="right">
-                    <div className={`group p-4 rounded-xl bg-gradient-to-br ${item.bg} to-navy-900/50 border border-gold-500/[0.06] hover:border-gold-500/15 transition-all duration-300 text-center`}>
+                    <div className={`group p-4 rounded-xl bg-gradient-to-br ${item.bg} to-navy-900/50 border border-gold-500/6 hover:border-gold-500/15 transition-all duration-300 text-center`}>
                       <item.icon size={22} className={`${item.color} mx-auto mb-2.5`} strokeWidth={1.5} />
                       <h4 className="font-heading font-bold text-cream-50 text-sm">{item.title}</h4>
                       <p className="text-cream-200/35 text-[10px] mt-1">{item.desc}</p>

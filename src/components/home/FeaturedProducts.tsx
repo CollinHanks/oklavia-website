@@ -22,7 +22,7 @@ export default function FeaturedProducts() {
       <div className="absolute inset-0 ottoman-pattern-bg" />
 
       {/* Side accents */}
-      <div className="absolute top-1/2 left-0 w-64 h-64 bg-gold-500/[0.02] rounded-full blur-[100px] -translate-y-1/2" />
+      <div className="absolute top-1/2 left-0 w-64 h-64 bg-gold-500/2 rounded-full blur-[100px] -translate-y-1/2" />
       <div className="absolute top-1/3 right-0 w-64 h-64 bg-navy-600/10 rounded-full blur-[100px]" />
 
       <div className="relative mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
@@ -30,7 +30,7 @@ export default function FeaturedProducts() {
         <AnimateIn className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-6">
             <OttomanTulip size={22} className="opacity-25" />
-            <div className="inline-flex items-center gap-3 px-5 py-1.5 rounded-full border border-gold-500/15 bg-gold-500/[0.03]">
+            <div className="inline-flex items-center gap-3 px-5 py-1.5 rounded-full border border-gold-500/15 bg-gold-500/3">
               <span className="text-gold-500/70 text-xs font-medium tracking-[0.2em] uppercase">Ürünlerimiz</span>
             </div>
             <OttomanTulip size={20} className="opacity-40 -scale-x-100" />
@@ -72,7 +72,7 @@ export default function FeaturedProducts() {
                       {/* Subtle pattern */}
 
                       {/* Glow */}
-                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gold-500/[0.06] rounded-full blur-3xl group-hover:w-40 group-hover:h-40 group-hover:bg-gold-500/[0.1] transition-all duration-700" />
+                      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-gold-500/6 rounded-full blur-3xl group-hover:w-40 group-hover:h-40 group-hover:bg-gold-500/[0.1] transition-all duration-700" />
 
                       {/* Product image */}
                       <div className="absolute inset-0 flex items-center justify-center">
@@ -117,7 +117,7 @@ export default function FeaturedProducts() {
                       {/* Size tags */}
                       <div className="flex flex-wrap gap-1.5 mb-4">
                         {product.sizes.slice(0, 3).map((size) => (
-                          <span key={size.value} className="px-2 py-0.5 rounded text-[10px] border border-gold-500/10 text-cream-200/40 bg-gold-500/[0.03]">
+                          <span key={size.value} className="px-2 py-0.5 rounded text-[10px] border border-gold-500/10 text-cream-200/40 bg-gold-500/3">
                             {size.weight}
                           </span>
                         ))}

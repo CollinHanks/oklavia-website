@@ -53,7 +53,7 @@ export default function B2BPage() {
         <AnimateIn className="text-center mb-10">
           <div className="flex items-center justify-center gap-3 mb-6">
             <OttomanTulip size={16} className="opacity-40" />
-            <div className="inline-flex items-center gap-3 px-5 py-1.5 rounded-full border border-gold-500/15 bg-gold-500/[0.03]">
+            <div className="inline-flex items-center gap-3 px-5 py-1.5 rounded-full border border-gold-500/15 bg-gold-500/3">
               <Building2 size={12} className="text-gold-500/60" />
               <span className="text-gold-500/70 text-xs font-medium tracking-[0.2em] uppercase">Kurumsal</span>
             </div>
@@ -108,7 +108,7 @@ export default function B2BPage() {
         {/* Application Form */}
         <AnimateIn>
           <div className="card-premium rounded-3xl p-6 sm:p-8 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gold-500/[0.02] rounded-full blur-[80px]" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gold-500/2 rounded-full blur-[80px]" />
 
             <div className="relative">
               <div className="flex items-center gap-3 mb-8">

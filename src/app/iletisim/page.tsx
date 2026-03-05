@@ -43,7 +43,7 @@ export default function IletisimPage() {
         <AnimateIn className="text-center mb-10">
           <div className="flex items-center justify-center gap-3 mb-6">
             <OttomanTulip size={16} className="opacity-40" />
-            <div className="inline-flex items-center gap-3 px-5 py-1.5 rounded-full border border-gold-500/15 bg-gold-500/[0.03]">
+            <div className="inline-flex items-center gap-3 px-5 py-1.5 rounded-full border border-gold-500/15 bg-gold-500/3">
               <span className="text-gold-500/70 text-xs font-medium tracking-[0.2em] uppercase">İletişim</span>
             </div>
             <OttomanTulip size={16} className="opacity-40 -scale-x-100" />

@@ -18,7 +18,7 @@ function GoldSocialIcon({ href, label, children, i }: { href: string; label: str
       transition={{ delay: 0.4 + i * 0.1, type: 'spring', stiffness: 300, damping: 15 }}
       whileHover={{ y: -5, scale: 1.2, boxShadow: '0 8px 30px rgba(212,175,55,0.3)' }}
       whileTap={{ scale: 0.85 }}
-      className="w-11 h-11 rounded-full border border-gold-500/20 bg-gradient-to-br from-gold-500/[0.05] to-transparent flex items-center justify-center text-gold-400/50 hover:text-gold-300 hover:border-gold-400/60 hover:bg-gold-500/15 transition-colors duration-300 backdrop-blur-sm"
+      className="w-11 h-11 rounded-full border border-gold-500/20 bg-gradient-to-br from-gold-500/5 to-transparent flex items-center justify-center text-gold-400/50 hover:text-gold-300 hover:border-gold-400/60 hover:bg-gold-500/15 transition-colors duration-300 backdrop-blur-sm"
     >
       {children}
     </motion.a>
@@ -57,7 +57,7 @@ export default function Footer() {
       <motion.div
         animate={{ opacity: [0.02, 0.05, 0.02], scale: [0.95, 1.05, 0.95] }}
         transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute top-48 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-gold-400 rounded-full blur-[200px] pointer-events-none"
+        className="absolute top-48 left-1/2 -translate-x-1/2 w-250 h-100 bg-gold-400 rounded-full blur-[200px] pointer-events-none"
       />
 
       {/* Medallion decorations */}
@@ -76,7 +76,7 @@ export default function Footer() {
         initial={{ opacity: 0, y: 20 }}
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.6 }}
-        className="relative border-b border-gold-500/[0.08]"
+        className="relative border-b border-gold-500/8"
       >
         <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-5">
@@ -179,14 +179,14 @@ export default function Footer() {
             </h3>
             <ul className="space-y-4">
               <li className="flex gap-3 text-sm">
-                <div className="w-8 h-8 rounded-lg bg-gold-500/[0.08] border border-gold-500/10 flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-gold-500/8 border border-gold-500/10 flex items-center justify-center shrink-0">
                   <MapPin size={14} className="text-gold-400/60" />
                 </div>
                 <span className="text-cream-100/50 leading-relaxed">{CONTACT.fullAddress}</span>
               </li>
               <li>
                 <a href={`tel:${CONTACT.phoneRaw}`} className="flex gap-3 text-sm text-cream-100/50 hover:text-gold-300 transition-colors group items-center">
-                  <div className="w-8 h-8 rounded-lg bg-gold-500/[0.08] border border-gold-500/10 flex items-center justify-center shrink-0 group-hover:bg-gold-500/15 group-hover:border-gold-500/25 transition-all">
+                  <div className="w-8 h-8 rounded-lg bg-gold-500/8 border border-gold-500/10 flex items-center justify-center shrink-0 group-hover:bg-gold-500/15 group-hover:border-gold-500/25 transition-all">
                     <Phone size={14} className="text-gold-400/60 group-hover:text-gold-400" />
                   </div>
                   {CONTACT.phone}
@@ -194,7 +194,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href={`mailto:${CONTACT.email}`} className="flex gap-3 text-sm text-cream-100/50 hover:text-gold-300 transition-colors group items-center">
-                  <div className="w-8 h-8 rounded-lg bg-gold-500/[0.08] border border-gold-500/10 flex items-center justify-center shrink-0 group-hover:bg-gold-500/15 group-hover:border-gold-500/25 transition-all">
+                  <div className="w-8 h-8 rounded-lg bg-gold-500/8 border border-gold-500/10 flex items-center justify-center shrink-0 group-hover:bg-gold-500/15 group-hover:border-gold-500/25 transition-all">
                     <Mail size={14} className="text-gold-400/60 group-hover:text-gold-400" />
                   </div>
                   {CONTACT.email}
@@ -215,7 +215,7 @@ export default function Footer() {
             </h3>
             <div className="space-y-4">
               <div className="flex gap-3 text-sm items-center">
-                <div className="w-8 h-8 rounded-lg bg-gold-500/[0.08] border border-gold-500/10 flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-gold-500/8 border border-gold-500/10 flex items-center justify-center shrink-0">
                   <Clock size={14} className="text-gold-400/60" />
                 </div>
                 <div>
@@ -224,7 +224,7 @@ export default function Footer() {
                 </div>
               </div>
               <div className="flex gap-3 text-sm items-center">
-                <div className="w-8 h-8 rounded-lg bg-gold-500/[0.08] border border-gold-500/10 flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-gold-500/8 border border-gold-500/10 flex items-center justify-center shrink-0">
                   <Clock size={14} className="text-gold-400/60" />
                 </div>
                 <div>
@@ -242,7 +242,7 @@ export default function Footer() {
               transition={{ delay: 0.6, type: 'spring' }}
               className="mt-6 relative overflow-hidden rounded-xl border border-gold-500/15"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-gold-500/[0.04] via-gold-500/[0.08] to-gold-500/[0.04]" />
+              <div className="absolute inset-0 bg-gradient-to-r from-gold-500/4 via-gold-500/8 to-gold-500/4" />
               {/* Shimmer sweep */}
               <motion.div
                 animate={{ x: ['-100%', '200%'] }}
@@ -277,8 +277,8 @@ export default function Footer() {
         </div>
 
         {/* Final animated gold line */}
-        <div className="relative h-[3px] overflow-hidden">
-          <div className="absolute inset-0 bg-gold-500/[0.08]" />
+        <div className="relative h-0.75 overflow-hidden">
+          <div className="absolute inset-0 bg-gold-500/8" />
           <motion.div
             animate={{ x: ['-60%', '160%'] }}
             transition={{ duration: 5, repeat: Infinity, ease: 'linear' }}
