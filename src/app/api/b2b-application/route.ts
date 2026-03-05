@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { supabase } from '@/lib/supabase'
+import { getSupabase } from '@/lib/supabase'
 
 export async function POST(request: Request) {
   try {
@@ -14,7 +14,12 @@ export async function POST(request: Request) {
       )
     }
 
-    const { error } = await supabase
+    const sb = getSupabase()
+    if (!sb) {
+      return NextResponse.json({ error: 'Veritabanı bağlantısı yapılandırılmamış.' }, { status: 500 })
+    }
+
+    const { error } = await sb
       .from('b2b_applications')
       .insert([{
         company_name,

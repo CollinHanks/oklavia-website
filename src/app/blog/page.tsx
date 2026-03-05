@@ -6,7 +6,7 @@ import Image from 'next/image'
 import { Calendar, ArrowRight, Tag, BookOpen } from 'lucide-react'
 import { OttomanDivider, OttomanTulip, OttomanMedallion, OttomanRumi } from '@/components/ui/OttomanMotifs'
 import AnimateIn from '@/components/ui/AnimateIn'
-import { supabase, type BlogPost } from '@/lib/supabase'
+import { getSupabase, type BlogPost } from '@/lib/supabase'
 
 const FALLBACK_POSTS = [
   { id: '1', title: 'Evde Mükemmel Su Böreği Yapmanın Sırları', slug: 'evde-mukemmel-su-boregi-yapmanin-sirlari', excerpt: 'Ustalarımızdan öğrendiğimiz püf noktalarıyla evde profesyonel su böreği yapmanın tüm incelikleri.', category: 'tarifler' as const, author: 'OKLAVİA Mutfağı', published_at: '2025-02-15', cover_image: '/images/products/su-boregi-2.jpg' },
@@ -36,7 +36,7 @@ export default function BlogPage() {
   useEffect(() => {
     async function fetchPosts() {
       try {
-        const { data, error } = await supabase
+        const sb = getSupabase(); if (!sb) throw new Error('no sb'); const { data, error } = await sb
           .from('blog_posts')
           .select('*')
           .eq('published', true)

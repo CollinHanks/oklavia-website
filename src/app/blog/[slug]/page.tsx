@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowLeft, Calendar, Tag } from 'lucide-react'
 import AnimateIn from '@/components/ui/AnimateIn'
-import { supabase, type BlogPost } from '@/lib/supabase'
+import { getSupabase, type BlogPost } from '@/lib/supabase'
 
 const categoryColors: Record<string, string> = {
   tarifler: 'bg-orange-500/10 text-orange-400 border-orange-500/15',
@@ -46,7 +46,7 @@ export default function BlogDetailPage() {
   useEffect(() => {
     async function fetchPost() {
       try {
-        const { data, error } = await supabase
+        const sb = getSupabase(); if (!sb) throw new Error('no sb'); const { data, error } = await sb
           .from('blog_posts')
           .select('*')
           .eq('slug', slug)
@@ -102,7 +102,7 @@ export default function BlogDetailPage() {
 
         <AnimateIn>
           <div className="aspect-[16/8] rounded-2xl overflow-hidden mb-8 relative">
-            <Image src={post.image} alt={post.title} fill className="object-cover" sizes="100vw" priority />
+            <Image src={post.image} alt={post.title} fill className="object-cover" sizes="100vw" />
             <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-navy-900/60 to-transparent" />
           </div>
         </AnimateIn>
