@@ -12,10 +12,10 @@ export const CONTACT = {
   phoneRaw: '+905324554576',
   whatsapp: '+905324554576',
   email: 'merhaba@oklavia.com',
-  address: 'Şahintepe Mah. Eski İstanbul Cd. Gülcan İş Merkez NO:114 İç Kapı NO:2',
+  address: 'Şahintepe Mah. Eski İstanbul Cd. Oğulcan İş Merkezi NO:114 İç Kapı NO:2',
   district: 'Başakşehir',
   city: 'İstanbul',
-  fullAddress: 'Şahintepe Mah. Eski İstanbul Cd. Gülcan İş Merkez NO:114 İç Kapı NO:2 BAŞAKŞEHİR / İSTANBUL',
+  fullAddress: 'Şahintepe Mah. Eski İstanbul Cd. Oğulcan İş Merkezi NO:114 İç Kapı NO:2 BAŞAKŞEHİR / İSTANBUL',
   googleMapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.2!2d28.7735!3d41.0925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa5e0a9b1c8d9%3A0x0!2zxZ5haGludGVwZSBNYWguIEJhxZ9hayxlaGly!5e0!3m2!1str!2str!4v1709600000000',
 } as const
 

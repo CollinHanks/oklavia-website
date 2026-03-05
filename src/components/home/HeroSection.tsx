@@ -51,12 +51,12 @@ export default function HeroSection() {
       ))}
 
       {/* Decorative vertical lines */}
-      <div className="absolute top-0 left-1/4 w-px h-32 bg-gradient-to-b from-transparent via-gold-500/10 to-transparent" />
-      <div className="absolute bottom-0 left-1/3 w-px h-40 bg-gradient-to-t from-transparent via-gold-500/6 to-transparent" />
+      <div className="absolute top-0 left-1/4 w-px h-32 bg-linear-to-b from-transparent via-gold-500/10 to-transparent" />
+      <div className="absolute bottom-0 left-1/3 w-px h-40 bg-linear-to-t from-transparent via-gold-500/6 to-transparent" />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 text-center">
-        <motion.div initial={{ scaleX: 0, opacity: 0 }} animate={{ scaleX: 1, opacity: 1 }} transition={{ duration: 1.2 }} className="mx-auto w-48 h-px bg-gradient-to-r from-transparent via-gold-500/50 to-transparent mb-8" />
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
+        <motion.div initial={{ scaleX: 0, opacity: 0 }} animate={{ scaleX: 1, opacity: 1 }} transition={{ duration: 1.2 }} className="mx-auto w-48 h-px bg-linear-to-r from-transparent via-gold-500/50 to-transparent mb-8" />
 
         {/* Badge */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="inline-flex items-center gap-3 px-6 py-2 rounded-full border border-gold-500/20 bg-gold-500/5 mb-10">
@@ -72,9 +72,9 @@ export default function HeroSection() {
 
         {/* Decorative divider */}
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.3 }} className="flex items-center justify-center gap-4 mb-8">
-          <div className="w-16 h-px bg-gradient-to-r from-transparent to-gold-500/30" />
+          <div className="w-16 h-px bg-linear-to-r from-transparent to-gold-500/30" />
           <div className="w-2 h-2 rounded-full bg-gold-500/30" />
-          <div className="w-16 h-px bg-gradient-to-l from-transparent to-gold-500/30" />
+          <div className="w-16 h-px bg-linear-to-l from-transparent to-gold-500/30" />
         </motion.div>
 
         {/* Slogan */}
@@ -110,13 +110,13 @@ export default function HeroSection() {
                 <p className="text-gold-400 font-heading font-bold text-lg sm:text-xl md:text-2xl lg:text-3xl">{stat.value}</p>
                 <p className="text-cream-200/40 text-[10px] sm:text-xs mt-1.5 tracking-wider uppercase">{stat.label}</p>
               </div>
-              {i < arr.length - 1 && <div className="hidden sm:block w-px h-10 bg-gradient-to-b from-transparent via-gold-500/20 to-transparent" />}
+              {i < arr.length - 1 && <div className="hidden sm:block w-px h-10 bg-linear-to-b from-transparent via-gold-500/20 to-transparent" />}
             </div>
           ))}
         </motion.div>
       </div>
 
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-navy-950 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-navy-950 to-transparent" />
 
       <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 2 }} className="absolute bottom-8 left-1/2 -translate-x-1/2">
         <motion.div animate={{ y: [0, 10, 0] }} transition={{ duration: 2, repeat: Infinity }} className="flex flex-col items-center gap-2">

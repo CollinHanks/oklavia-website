@@ -15,7 +15,7 @@ OKLAVİA Unlu Mamülleri için premium, lüks hissiyatlı, Osmanlı/Türk çini 
 - Telefon: 0532 455 45 76
 - WhatsApp: +905324554576
 - E-posta: merhaba@oklavia.com
-- Adres: Şahintepe Mah. Eski İstanbul Cd. Gülcan İş Merkez NO:114 İç Kapı NO:2 BAŞAKŞEHİR / İSTANBUL
+- Adres: Şahintepe Mah. Eski İstanbul Cd. Oğulcan İş Merkezi NO:114 İç Kapı NO:2 BAŞAKŞEHİR / İSTANBUL
 
 ## 📱 SOSYAL MEDYA
 - Instagram: @oklavia2025

@@ -48,7 +48,7 @@ export default function B2BPage() {
         <OttomanMedallion size={100} />
       </div>
 
-      <div className="relative mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <AnimateIn className="text-center mb-10">
           <div className="flex items-center justify-center gap-3 mb-6">

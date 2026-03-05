@@ -18,14 +18,14 @@ export default function FeaturedProducts() {
   return (
     <section className="py-16 relative">
       {/* Background layers */}
-      <div className="absolute inset-0 bg-gradient-to-b from-navy-950 via-navy-900/50 to-navy-950" />
+      <div className="absolute inset-0 bg-linear-to-b from-navy-950 via-navy-900/50 to-navy-950" />
       <div className="absolute inset-0 ottoman-pattern-bg" />
 
       {/* Side accents */}
       <div className="absolute top-1/2 left-0 w-64 h-64 bg-gold-500/2 rounded-full blur-[100px] -translate-y-1/2" />
       <div className="absolute top-1/3 right-0 w-64 h-64 bg-navy-600/10 rounded-full blur-[100px]" />
 
-      <div className="relative mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <AnimateIn className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-6">
@@ -68,7 +68,7 @@ export default function FeaturedProducts() {
                     </div>
 
                     {/* Image area */}
-                    <div className={`aspect-[4/3] bg-gradient-to-br ${visual.gradient} relative overflow-hidden`}>
+                    <div className={`aspect-[4/3] bg-linear-to-br ${visual.gradient} relative overflow-hidden`}>
                       {/* Subtle pattern */}
 
                       {/* Glow */}
@@ -79,7 +79,7 @@ export default function FeaturedProducts() {
                         {visual.image ? (
                           <Image src={visual.image} alt={product.name} fill className="object-cover group-hover:scale-105 transition-transform duration-700" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
                         ) : (
-                          <div className="w-full h-full bg-gradient-to-br from-navy-700 to-navy-800" />
+                          <div className="w-full h-full bg-linear-to-br from-navy-700 to-navy-800" />
                         )}
                       </div>
 
@@ -98,7 +98,7 @@ export default function FeaturedProducts() {
                       </div>
 
                       {/* Bottom gradient */}
-                      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-navy-900/80 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 h-16 bg-linear-to-t from-navy-900/80 to-transparent" />
                     </div>
 
                     {/* Content */}

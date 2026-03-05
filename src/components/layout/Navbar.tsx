@@ -23,8 +23,8 @@ export default function Navbar() {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled ? 'glass-navy shadow-lg shadow-navy-950/50 py-0' : 'bg-transparent py-1'}`}>
-      <div className={`h-[1px] bg-gradient-to-r from-transparent via-gold-500/30 to-transparent transition-opacity duration-500 ${scrolled ? 'opacity-100' : 'opacity-0'}`} />
-      <nav className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+      <div className={`h-[1px] bg-linear-to-r from-transparent via-gold-500/30 to-transparent transition-opacity duration-500 ${scrolled ? 'opacity-100' : 'opacity-0'}`} />
+      <nav className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-14 sm:h-16 items-center justify-between">
           <Link href="/" className="flex items-center group relative shrink-0">
             <Image src="/images/logo.png" alt="OKLAVİA" width={85} height={45} className="h-[26px] w-auto" priority />
@@ -36,7 +36,7 @@ export default function Navbar() {
                 className={`relative px-4 py-2.5 text-[13px] font-medium transition-all duration-300 group ${pathname === link.href ? 'text-gold-400' : 'text-cream-200/70 hover:text-gold-300'}`}>
                 {link.label}
                 {pathname === link.href ? (
-                  <motion.span layoutId="navbar-active" className="absolute bottom-0.5 left-3 right-3 h-[2px] rounded-full bg-gradient-to-r from-gold-500/0 via-gold-400 to-gold-500/0" />
+                  <motion.span layoutId="navbar-active" className="absolute bottom-0.5 left-3 right-3 h-[2px] rounded-full bg-linear-to-r from-gold-500/0 via-gold-400 to-gold-500/0" />
                 ) : (
                   <span className="absolute bottom-0.5 left-3 right-3 h-[1px] rounded-full bg-gold-500/0 group-hover:bg-gold-500/20 transition-colors duration-300" />
                 )}

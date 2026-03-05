@@ -92,7 +92,7 @@ export default function BlogDetailPage() {
   return (
     <div className="py-10 sm:py-14 relative">
       <div className="absolute inset-0 bg-navy-950" />
-      <div className="relative mx-auto max-w-[820px] px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
         <AnimateIn>
           <Link href="/blog" className="inline-flex items-center gap-2 text-cream-200/40 hover:text-gold-400 text-sm mb-8 transition-colors group">
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
@@ -103,7 +103,7 @@ export default function BlogDetailPage() {
         <AnimateIn>
           <div className="aspect-[16/8] rounded-2xl overflow-hidden mb-8 relative">
             <Image src={post.image} alt={post.title} fill className="object-cover" sizes="100vw" />
-            <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-navy-900/60 to-transparent" />
+            <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-navy-900/60 to-transparent" />
           </div>
         </AnimateIn>
 

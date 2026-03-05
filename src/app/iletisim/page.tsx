@@ -38,7 +38,7 @@ export default function IletisimPage() {
         <OttomanFloral size={100} />
       </div>
 
-      <div className="relative mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <AnimateIn className="text-center mb-10">
           <div className="flex items-center justify-center gap-3 mb-6">
@@ -61,7 +61,7 @@ export default function IletisimPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-10">
           {contactCards.map((item, i) => (
             <AnimateIn key={item.title} delay={i * 0.08}>
-              <div className={`group card-premium rounded-2xl p-5 bg-gradient-to-br ${item.accent} to-navy-900/50 h-full hover:border-gold-500/20 transition-all duration-300`}>
+              <div className={`group card-premium rounded-2xl p-5 bg-linear-to-br ${item.accent} to-navy-900/50 h-full hover:border-gold-500/20 transition-all duration-300`}>
                 <div className={`w-11 h-11 rounded-xl bg-navy-800/50 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300`}>
                   <item.icon size={20} className={item.iconColor} strokeWidth={1.5} />
                 </div>

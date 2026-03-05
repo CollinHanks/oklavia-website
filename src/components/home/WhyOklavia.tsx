@@ -17,7 +17,7 @@ export default function WhyOklavia() {
   return (
     <section className="py-16 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-navy-900/60 via-navy-900/40 to-navy-950" />
+      <div className="absolute inset-0 bg-linear-to-b from-navy-900/60 via-navy-900/40 to-navy-950" />
       <div className="absolute inset-0 cini-pattern-bg" />
 
       {/* Decorative motif mix */}
@@ -37,7 +37,7 @@ export default function WhyOklavia() {
 
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-150 h-100 bg-gold-500/2 rounded-full blur-[100px]" />
 
-      <div className="relative mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         <AnimateIn className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-6">
             <OttomanTulip size={16} className="opacity-40" />
@@ -58,13 +58,13 @@ export default function WhyOklavia() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, i) => (
             <AnimateIn key={feature.title} delay={i * 0.08}>
-              <div className={`group relative rounded-2xl border border-gold-500/8 bg-gradient-to-br ${feature.accent} to-navy-900/50 p-8 h-full hover:border-gold-500/20 transition-all duration-500 overflow-hidden`}>
+              <div className={`group relative rounded-2xl border border-gold-500/8 bg-linear-to-br ${feature.accent} to-navy-900/50 p-8 h-full hover:border-gold-500/20 transition-all duration-500 overflow-hidden`}>
                 {/* Hover glow */}
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gold-500/3 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
                 <div className="relative">
                   {/* Icon */}
-                  <div className="w-14 h-14 mb-6 rounded-xl bg-gradient-to-br from-gold-500/15 to-gold-500/5 flex items-center justify-center border border-gold-500/10 group-hover:border-gold-500/25 group-hover:shadow-lg group-hover:shadow-gold-500/5 transition-all duration-500">
+                  <div className="w-14 h-14 mb-6 rounded-xl bg-linear-to-br from-gold-500/15 to-gold-500/5 flex items-center justify-center border border-gold-500/10 group-hover:border-gold-500/25 group-hover:shadow-lg group-hover:shadow-gold-500/5 transition-all duration-500">
                     <feature.icon size={26} className="text-gold-400" strokeWidth={1.5} />
                   </div>
 

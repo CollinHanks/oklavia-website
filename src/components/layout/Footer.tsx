@@ -18,7 +18,7 @@ function GoldSocialIcon({ href, label, children, i }: { href: string; label: str
       transition={{ delay: 0.4 + i * 0.1, type: 'spring', stiffness: 300, damping: 15 }}
       whileHover={{ y: -5, scale: 1.2, boxShadow: '0 8px 30px rgba(212,175,55,0.3)' }}
       whileTap={{ scale: 0.85 }}
-      className="w-11 h-11 rounded-full border border-gold-500/20 bg-gradient-to-br from-gold-500/5 to-transparent flex items-center justify-center text-gold-400/50 hover:text-gold-300 hover:border-gold-400/60 hover:bg-gold-500/15 transition-colors duration-300 backdrop-blur-sm"
+      className="w-11 h-11 rounded-full border border-gold-500/20 bg-linear-to-br from-gold-500/5 to-transparent flex items-center justify-center text-gold-400/50 hover:text-gold-300 hover:border-gold-400/60 hover:bg-gold-500/15 transition-colors duration-300 backdrop-blur-sm"
     >
       {children}
     </motion.a>
@@ -32,11 +32,11 @@ export default function Footer() {
   return (
     <footer ref={ref} className="relative overflow-hidden">
       {/* ═══ TRANSITION ZONE ═══ */}
-      <div className="h-20 bg-gradient-to-b from-transparent via-navy-900/60 to-navy-900" />
+      <div className="h-20 bg-linear-to-b from-transparent via-navy-900/60 to-navy-900" />
 
       {/* Animated shimmer line - sweeping gold */}
       <div className="relative h-[2px] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-gold-500/15 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-r from-transparent via-gold-500/15 to-transparent" />
         <motion.div
           animate={{ x: ['-100%', '200%'] }}
           transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut', repeatDelay: 1 }}
@@ -51,7 +51,7 @@ export default function Footer() {
       </div>
 
       {/* ═══ BACKGROUND ═══ */}
-      <div className="absolute inset-0 bg-gradient-to-b from-navy-900 via-[#0D1630] to-[#080E1F]" style={{ top: '80px' }} />
+      <div className="absolute inset-0 bg-linear-to-b from-navy-900 via-[#0D1630] to-[#080E1F]" style={{ top: '80px' }} />
 
       {/* Pulsing gold aura */}
       <motion.div
@@ -78,7 +78,7 @@ export default function Footer() {
         transition={{ duration: 0.6 }}
         className="relative border-b border-gold-500/8"
       >
-        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
+        <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-5">
             <div className="text-center sm:text-left">
               <h3 className="font-heading font-bold text-lg sm:text-xl text-cream-50">
@@ -104,7 +104,7 @@ export default function Footer() {
       </motion.div>
 
       {/* ═══ MAIN CONTENT ═══ */}
-      <div className="relative mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
+      <div className="relative mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-10 sm:py-14">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
 
           {/* ── Brand Column ── */}
@@ -120,7 +120,7 @@ export default function Footer() {
 
             <div className="flex items-center gap-2 mb-4">
               <OttomanTulip size={14} />
-              <div className="w-10 h-px bg-gradient-to-r from-gold-400/50 to-transparent" />
+              <div className="w-10 h-px bg-linear-to-r from-gold-400/50 to-transparent" />
               <OttomanTulip size={14} className="-scale-x-100" />
             </div>
 
@@ -242,7 +242,7 @@ export default function Footer() {
               transition={{ delay: 0.6, type: 'spring' }}
               className="mt-6 relative overflow-hidden rounded-xl border border-gold-500/15"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-gold-500/4 via-gold-500/8 to-gold-500/4" />
+              <div className="absolute inset-0 bg-linear-to-r from-gold-500/4 via-gold-500/8 to-gold-500/4" />
               {/* Shimmer sweep */}
               <motion.div
                 animate={{ x: ['-100%', '200%'] }}
@@ -260,9 +260,9 @@ export default function Footer() {
 
       {/* ═══ BOTTOM BAR ═══ */}
       <div className="relative">
-        <div className="h-px bg-gradient-to-r from-transparent via-gold-500/20 to-transparent" />
+        <div className="h-px bg-linear-to-r from-transparent via-gold-500/20 to-transparent" />
 
-        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row justify-between items-center gap-3">
+        <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row justify-between items-center gap-3">
           <p className="text-cream-200/30 text-xs flex items-center gap-1.5">
             © {new Date().getFullYear()} OKLAVİA Unlu Mamülleri. Tüm hakları saklıdır.
           </p>

@@ -111,7 +111,7 @@ export function FooterOrnament() {
   return (
     <div className="w-full relative">
       {/* Gold gradient line */}
-      <div className="h-px bg-gradient-to-r from-transparent via-gold-400/50 to-transparent" />
+      <div className="h-px bg-linear-to-r from-transparent via-gold-400/50 to-transparent" />
 
       {/* Ornamental center piece */}
       <div className="flex justify-center -mt-5">

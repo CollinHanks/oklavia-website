@@ -44,7 +44,7 @@ export default function HakkimizdaPage() {
         <OttomanMedallion size={90} />
       </div>
 
-      <div className="relative mx-auto max-w-[1100px] px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <AnimateIn className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-6">
@@ -69,7 +69,7 @@ export default function HakkimizdaPage() {
             {/* Hero image */}
             <div className="aspect-[21/9] relative">
               <Image src="/images/general/hero-bg.jpg" alt="OKLAVİA - Geleneksel üretim" fill className="object-cover" sizes="100vw" />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/60 to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-navy-900 via-navy-900/60 to-transparent" />
               <div className="absolute bottom-6 left-6 sm:left-8">
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 rounded-xl bg-gold-500/15 border border-gold-500/20 flex items-center justify-center backdrop-blur-sm">
@@ -135,7 +135,7 @@ export default function HakkimizdaPage() {
                     <p className="text-gold-400 font-heading font-black text-2xl sm:text-3xl md:text-4xl">{stat.value}</p>
                     <p className="text-cream-200/35 text-[10px] sm:text-xs mt-1.5 tracking-wider uppercase">{stat.label}</p>
                   </div>
-                  {i < arr.length - 1 && <div className="hidden sm:block w-px h-14 bg-gradient-to-b from-transparent via-gold-500/15 to-transparent" />}
+                  {i < arr.length - 1 && <div className="hidden sm:block w-px h-14 bg-linear-to-b from-transparent via-gold-500/15 to-transparent" />}
                 </div>
               ))}
             </div>
@@ -146,7 +146,7 @@ export default function HakkimizdaPage() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-14">
           {values.map((item, i) => (
             <AnimateIn key={item.title} delay={i * 0.1}>
-              <div className={`group card-premium rounded-2xl p-7 h-full bg-gradient-to-br ${item.accent} to-navy-900/50 text-center`}>
+              <div className={`group card-premium rounded-2xl p-7 h-full bg-linear-to-br ${item.accent} to-navy-900/50 text-center`}>
                 <div className="w-14 h-14 mx-auto mb-5 rounded-xl bg-gold-500/10 border border-gold-500/15 flex items-center justify-center group-hover:shadow-lg group-hover:shadow-gold-500/5 transition-all duration-500">
                   <item.icon size={24} className="text-gold-400" strokeWidth={1.5} />
                 </div>
@@ -175,7 +175,7 @@ export default function HakkimizdaPage() {
 
         <div className="relative">
           {/* Center line */}
-          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-gold-500/30 via-gold-500/15 to-transparent md:-translate-x-px" />
+          <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-linear-to-b from-gold-500/30 via-gold-500/15 to-transparent md:-translate-x-px" />
 
           <div className="space-y-7">
             {timeline.map((item, i) => (

@@ -19,7 +19,7 @@ export default function DeliveryInfo() {
     <section className="py-16 relative overflow-hidden">
       <div className="absolute inset-0 bg-navy-950" />
 
-      <div className="relative mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8">
         {/* Section header */}
         <AnimateIn className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-6">
@@ -113,7 +113,7 @@ export default function DeliveryInfo() {
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                 {deliveryFeatures.map((item, i) => (
                   <AnimateIn key={item.title} delay={i * 0.06} direction="right">
-                    <div className={`group p-4 rounded-xl bg-gradient-to-br ${item.bg} to-navy-900/50 border border-gold-500/6 hover:border-gold-500/15 transition-all duration-300 text-center`}>
+                    <div className={`group p-4 rounded-xl bg-linear-to-br ${item.bg} to-navy-900/50 border border-gold-500/6 hover:border-gold-500/15 transition-all duration-300 text-center`}>
                       <item.icon size={22} className={`${item.color} mx-auto mb-2.5`} strokeWidth={1.5} />
                       <h4 className="font-heading font-bold text-cream-50 text-sm">{item.title}</h4>
                       <p className="text-cream-200/35 text-[10px] mt-1">{item.desc}</p>

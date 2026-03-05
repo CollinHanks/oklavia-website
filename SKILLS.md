@@ -1,115 +1,82 @@
-# OKLAVİA WEB SİTESİ - TEKNİK BECERİLER & STACK
+# OKLAVİA WEB SİTESİ — TEKNİK DOKÜMANTASYON
 
-## 🛠️ KULLANILAN TEKNOLOJİLER
+## Teknoloji Stack
+- **Framework:** Next.js 16.1 (App Router, Turbopack)
+- **Stil:** Tailwind CSS v4 (custom theme)
+- **Animasyon:** Framer Motion
+- **Veritabanı:** Supabase (PostgreSQL)
+- **Deploy:** Vercel (Frankfurt region)
+- **Domain:** oklavia.com (Squarespace DNS → Vercel)
 
-### Frontend
-| Teknoloji | Versiyon | Kullanım Amacı |
-|-----------|----------|----------------|
-| Next.js | 16.1 | Ana framework (App Router, Turbopack) |
-| React | 19.2 | UI kütüphanesi |
-| TypeScript | 5.7+ | Tip güvenliği |
-| Tailwind CSS | 4.0 | CSS-first utility framework |
-| Framer Motion | 12.0+ | Animasyonlar & geçişler |
-| Lucide React | 0.470+ | İkon kütüphanesi |
+## Renk Paleti
+```
+Navy:  #0B1426 (950) → #0F1A35 (900) → #162548 (800) → #1F3050 (700)
+Gold:  #A68A3A (600) → #C9A84C (500) → #D4AF37 (400) → #E5C76B (300)
+Cream: #FDFBF5 (50) → #F5F0E8 (100) → #EDE5D5 (200)
+```
 
-### Backend & Veritabanı
-| Teknoloji | Kullanım Amacı |
-|-----------|----------------|
-| Supabase | PostgreSQL veritabanı + Auth + API |
-| Next.js API Routes | Form submission endpoint'leri |
+## Font
+- **Başlık:** Cormorant Garamond (serif)
+- **Gövde:** Montserrat (sans-serif)
 
-### Deployment
-| Teknoloji | Kullanım Amacı |
-|-----------|----------------|
-| Vercel | Hosting & CI/CD |
-| GitHub | Versiyon kontrolü |
-
-## 📁 DOSYA YAPISI KURALLARI
-
-### Klasör Organizasyonu
+## Proje Yapısı
 ```
 src/
-├── app/                    # Next.js App Router sayfaları
-│   ├── layout.tsx          # Root layout
-│   ├── page.tsx            # Ana sayfa
-│   ├── globals.css         # Global stiller + Tailwind theme
-│   ├── [sayfa]/page.tsx    # Alt sayfalar
-│   └── api/                # API route'ları
+├── app/
+│   ├── page.tsx          # Ana sayfa
+│   ├── layout.tsx        # Root layout (metadata, navbar, footer)
+│   ├── globals.css       # Global stiller + Tailwind theme
+│   ├── urunler/          # Ürünler sayfası
+│   ├── hakkimizda/       # Hakkımızda sayfası  
+│   ├── b2b/              # B2B / Toptan sayfası
+│   ├── blog/             # Blog listesi + [slug] detay
+│   ├── iletisim/         # İletişim sayfası
+│   ├── api/              # API routes (contact, b2b)
+│   ├── sitemap.ts        # Dinamik sitemap
+│   └── robots.ts         # robots.txt
 ├── components/
-│   ├── layout/             # Navbar, Footer, WhatsApp
-│   ├── ui/                 # Genel UI bileşenleri (AnimateIn, Motifs)
-│   ├── home/               # Ana sayfa bileşenleri
-│   ├── products/           # Ürün bileşenleri
-│   └── blog/               # Blog bileşenleri
+│   ├── home/             # Ana sayfa bileşenleri
+│   ├── layout/           # Navbar, Footer, WhatsApp, GA, JsonLd
+│   └── ui/               # OttomanMotifs, AnimateIn, PageTransition
 ├── lib/
-│   ├── constants.ts        # Tüm sabit veriler
-│   └── supabase.ts         # Supabase client
-└── types/                  # TypeScript tipleri
+│   ├── constants.ts      # Ürünler, iletişim, config
+│   └── supabase.ts       # Supabase client
+└── public/images/        # Optimize görseller (6.7MB toplam)
 ```
 
-### Dosya İsimlendirme
-- Bileşenler: PascalCase (HeroSection.tsx)
-- Sayfalar: page.tsx (Next.js convention)
-- Lib dosyaları: camelCase (constants.ts)
-- CSS: globals.css (tek dosya)
+## Supabase Tabloları
+| Tablo | Açıklama |
+|-------|----------|
+| `contact_messages` | İletişim formu gönderileri |
+| `b2b_applications` | B2B başvuruları |
+| `blog_posts` | Blog yazıları (CMS) |
 
-## 🎨 TASARIM SİSTEMİ
-
-### Renk Paleti (CSS Variables)
+## Environment Variables
 ```
-Navy: #050A18, #0A1128, #0F1B3D, #1B2845, #1E3A5F
-Gold: #A68A3A, #C9A84C, #D4AF37, #E5C76B, #F0DB8A
-Cream: #FDFBF5, #F5F0E8, #EDE5D5
+NEXT_PUBLIC_SUPABASE_URL      # Supabase project URL
+NEXT_PUBLIC_SUPABASE_ANON_KEY # Supabase anonymous key
+NEXT_PUBLIC_SITE_URL          # https://www.oklavia.com
+NEXT_PUBLIC_GA_ID             # Google Analytics ID (opsiyonel)
+RESEND_API_KEY                # E-posta bildirimi (opsiyonel)
 ```
 
-### Font Hiyerarşisi
-- H1: Montserrat Bold, 48-72px
-- H2: Montserrat Bold, 32-48px
-- H3: Montserrat SemiBold, 20-24px
-- Body: Inter Regular, 14-16px
-- Small: Inter, 12-13px
-- Label: Inter Medium, 11-12px, UPPERCASE, letter-spacing: 0.1em+
+## E-posta Bildirimi Kurulumu (Opsiyonel)
+1. resend.com'da hesap açın
+2. Domain doğrulayın (oklavia.com)
+3. API Key oluşturun
+4. Vercel → Settings → Environment Variables → `RESEND_API_KEY` ekleyin
+5. Redeploy
 
-### Bileşen Stilleri
-- `.card-premium` - Gradient bg + gold border + hover efekti
-- `.btn-gold` - Altın gradient buton + shimmer
-- `.btn-outline-gold` - Gold outline buton
-- `.btn-whatsapp` - Yeşil WhatsApp butonu
-- `.glass-navy` - Glassmorphism efekti
-- `.text-gold-gradient` - Altın gradient text
-- `.ottoman-pattern-bg` - Osmanlı desen arka plan
-- `.cini-pattern-bg` - Çini motif arka plan
-
-### Osmanlı Motifleri
-- OttomanDivider: Bölüm ayırıcı (lale motifli)
-- OttomanBorder: Sürekli tekrarlayan border pattern
-- OttomanCorner: Kart köşe süslemesi
-
-## 📋 SUPABASE TABLOLARI
-
-### contact_messages
-- id, name, email, phone, subject, message, is_read, created_at
-
-### b2b_applications
-- id, company_name, contact_person, email, phone, tax_number, city, business_type, estimated_monthly_order, products_interested[], message, status, is_read, created_at
-
-### blog_posts
-- id, title, slug, excerpt, content, cover_image, category, author, published, published_at, created_at, updated_at
-
-## 🔧 GELİŞTİRME KOMUTLARI
+## Geliştirme Komutları
 ```bash
-npm run dev          # Development (Turbopack)
+npm run dev          # Geliştirme sunucusu (localhost:3000)
 npm run build        # Production build
-npm run start        # Production server
-npm run lint         # ESLint
+npm run start        # Production sunucusu
 ```
 
-## 📝 KOD YAZIM KURALLARI
-1. Tüm component'ler 'use client' ile başlamalı (client-side interactivity gerekirse)
-2. Server component'ler default olarak tercih edilmeli
-3. Animasyonlar için Framer Motion kullanılmalı
-4. İkonlar için Lucide React kullanılmalı
-5. Renkler CSS variable'lar üzerinden kullanılmalı
-6. Responsive tasarım: mobile-first yaklaşım
-7. Accessibility: aria-label, semantic HTML
-8. Her yerde "OKLAVİA" (İ harfi ile) yazılmalı
+## Deploy
+```bash
+git add .
+git commit -m "açıklama"
+git push              # Vercel otomatik deploy eder
+```

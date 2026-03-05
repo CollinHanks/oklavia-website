@@ -65,7 +65,7 @@ export default function BlogPage() {
         <OttomanRumi size={80} />
       </div>
 
-      <div className="relative mx-auto max-w-[1100px] px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <AnimateIn className="text-center mb-10">
           <div className="flex items-center justify-center gap-3 mb-6">
             <OttomanTulip size={16} className="opacity-40" />
@@ -103,7 +103,7 @@ export default function BlogPage() {
               <AnimateIn key={post.id} delay={i * 0.1}>
                 <Link href={`/blog/${post.slug}`} className="group block h-full">
                   <article className="card-premium rounded-2xl overflow-hidden h-full flex flex-col">
-                    <div className="aspect-[16/9] bg-gradient-to-br from-navy-700/80 to-navy-800 relative overflow-hidden">
+                    <div className="aspect-[16/9] bg-linear-to-br from-navy-700/80 to-navy-800 relative overflow-hidden">
                       <Image src={post.cover_image || '/images/general/baklava-ottoman.jpg'} alt={post.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 50vw" />
                       <div className="absolute top-3 left-3">
                         <span className={`px-3 py-1 rounded-full text-[10px] font-semibold border ${categoryColors[post.category] || 'bg-gold-500/10 text-gold-400 border-gold-500/15'}`}>
@@ -111,7 +111,7 @@ export default function BlogPage() {
                           {categories.find(c => c.value === post.category)?.label}
                         </span>
                       </div>
-                      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-navy-900/60 to-transparent" />
+                      <div className="absolute bottom-0 left-0 right-0 h-16 bg-linear-to-t from-navy-900/60 to-transparent" />
                     </div>
                     <div className="p-5 flex-1 flex flex-col">
                       <div className="flex items-center gap-2 text-cream-200/30 text-xs mb-3">

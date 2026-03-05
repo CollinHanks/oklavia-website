@@ -44,7 +44,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
 
           <div className={`grid grid-cols-1 lg:grid-cols-2 `}>
             {/* Image */}
-            <div className={`aspect-video sm:aspect-[4/3] lg:aspect-auto lg:min-h-100 bg-gradient-to-br from-navy-700/80 via-navy-800 to-navy-900 relative overflow-hidden `}>
+            <div className={`aspect-video sm:aspect-[4/3] lg:aspect-auto lg:min-h-100 bg-linear-to-br from-navy-700/80 via-navy-800 to-navy-900 relative overflow-hidden `}>
               {/* Pattern overlay */}
 
               {/* Center glow */}
@@ -55,7 +55,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
                 {productImage ? (
                   <Image src={productImage} alt={product.name} fill className="object-cover group-hover:scale-105 transition-transform duration-700" sizes="(max-width: 1024px) 100vw, 50vw" />
                 ) : (
-                  <div className="w-full h-full bg-gradient-to-br from-navy-700 to-navy-800" />
+                  <div className="w-full h-full bg-linear-to-br from-navy-700 to-navy-800" />
                 )}
               </div>
 
@@ -74,7 +74,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
               </div>
 
               {/* Bottom gradient */}
-              <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-navy-900/60 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 h-24 bg-linear-to-t from-navy-900/60 to-transparent" />
             </div>
 
             {/* Details */}
@@ -201,7 +201,7 @@ export default function UrunlerPage() {
       {/* Background */}
       <div className="absolute inset-0 bg-navy-950" />
 
-      <div className="relative mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <AnimateIn className="text-center mb-12">
           <div className="flex items-center justify-center gap-3 mb-6">
