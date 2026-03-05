@@ -50,11 +50,12 @@ export default function BlogPage() {
             'oklavia-artik-tum-turkiyeye-teslimat-yapiyor': '/images/general/borek-melting.jpg',
             'fistikli-baklava-antepten-sofralariniza': '/images/general/baklava-ottoman.jpg',
           }
-          const postsWithImages = data.map((p: Record<string, string>) => ({
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          const postsWithImages = data.map((p: any) => ({
             ...p,
             cover_image: p.cover_image || imageMap[p.slug] || '/images/general/baklava-pyramid.jpg',
           }))
-          setPosts(postsWithImages)
+          setPosts(postsWithImages as typeof FALLBACK_POSTS)
         }
       } catch {
         // Use fallback
