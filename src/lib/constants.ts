@@ -16,7 +16,7 @@ export const CONTACT = {
   district: 'Başakşehir',
   city: 'İstanbul',
   fullAddress: 'Şahintepe Mah. Eski İstanbul Cd. Oğulcan İş Merkezi NO:114 İç Kapı NO:2 BAŞAKŞEHİR / İSTANBUL',
-  googleMapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.2!2d28.7735!3d41.0925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa5e0a9b1c8d9%3A0x0!2zxZ5haGludGVwZSBNYWguIEJhxZ9hayxlaGly!5e0!3m2!1str!2str!4v1709600000000',
+  googleMapsEmbed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3009.1!2d28.7204714!3d41.0738354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caa76dda979fff%3A0x6bfc63fccf7a85b3!2sOklavia%20Unlu%20Mam%C3%BClleri!5e0!3m2!1str!2str!4v1709700000000',
 } as const
 
 export const SOCIAL = {

@@ -43,7 +43,18 @@ export default function BlogPage() {
           .order('published_at', { ascending: false })
 
         if (data && data.length > 0 && !error) {
-          setPosts(data)
+          // Map fallback images for posts without cover_image
+          const imageMap: Record<string, string> = {
+            'evde-mukemmel-su-boregi-yapmanin-sirlari': '/images/products/su-boregi-2.jpg',
+            'turk-kahvesinin-tarihi-ve-kulturel-onemi': '/images/blog/turk-kahvesi.jpg',
+            'oklavia-artik-tum-turkiyeye-teslimat-yapiyor': '/images/general/borek-melting.jpg',
+            'fistikli-baklava-antepten-sofralariniza': '/images/general/baklava-ottoman.jpg',
+          }
+          const postsWithImages = data.map((p: Record<string, string>) => ({
+            ...p,
+            cover_image: p.cover_image || imageMap[p.slug] || '/images/general/baklava-pyramid.jpg',
+          }))
+          setPosts(postsWithImages)
         }
       } catch {
         // Use fallback
