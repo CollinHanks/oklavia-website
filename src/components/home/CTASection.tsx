@@ -40,8 +40,8 @@ export default function CTASection() {
             <span className="text-gold-gradient">Kapınızda</span>
           </h2>
           <p className="text-cream-200/50 text-base sm:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-            Soğuk zincir garantisiyle tüm Türkiye&apos;ye teslimat yapıyoruz.
-            Hemen sipariş verin, eşsiz lezzetlerimizi sofralarınıza taşıyalım.
+            İstanbul Başakşehir&apos;deki üretim tesisimizden, frigolu soğutmalı araçlarımızla 81 ile
+            soğuk zincir teslimat yapıyoruz. WhatsApp&apos;tan yazın veya bizi arayın, aynı gün siparişinizi hazırlayalım.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

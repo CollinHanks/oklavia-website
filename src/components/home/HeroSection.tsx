@@ -83,7 +83,8 @@ export default function HeroSection() {
         </motion.h1>
 
         <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.55 }} className="text-cream-200/50 text-sm sm:text-base max-w-2xl mx-auto mb-8 sm:mb-10 leading-relaxed px-4">
-          El yapımı su böreği, tereyağlı su böreği, fıstıklı baklava ve geleneksel Türk kahvesi. Yüzyıllık tarifler, modern sofralar için özenle hazırlanır.
+          1960&apos;dan bu yana İstanbul&apos;da el yapımı su böreği, tereyağlı su böreği, Antep fıstıklı baklava
+          ve geleneksel Türk kahvesi üretiyoruz. Katkı maddesi kullanmadan, soğuk zincir garantisiyle tüm Türkiye&apos;ye.
         </motion.p>
 
         {/* CTA Buttons */}

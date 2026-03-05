@@ -39,7 +39,7 @@ export default function FeaturedProducts() {
             Geleneksel <span className="text-gold-gradient">Lezzetler</span>
           </h2>
           <p className="text-cream-200/40 text-sm max-w-lg mx-auto mt-4 mb-6">
-            Her biri özenle hazırlanan, katkı maddesi içermeyen geleneksel tatlar
+            El yapımı su böreği, tereyağlı su böreği, fıstıklı baklava ve Türk kahvesi — hiçbirinde katkı maddesi yok, hepsi gerçek malzemeyle hazırlanıyor
           </p>
           <OttomanDivider />
         </AnimateIn>

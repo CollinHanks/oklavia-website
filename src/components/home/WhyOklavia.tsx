@@ -5,12 +5,12 @@ import { OttomanDivider, OttomanTulip, OttomanMedallion, OttomanStar, OttomanRum
 import AnimateIn from '@/components/ui/AnimateIn'
 
 const features = [
-  { icon: Heart, title: 'El Yapımı Üretim', description: 'Her ürünümüz geleneksel yöntemlerle, usta ellerde özenle hazırlanır. Makineleşmiş üretimden uzak, annelerimizden öğrendiğimiz tariflerle.', accent: 'from-rose-500/10' },
-  { icon: Leaf, title: 'Doğal Malzemeler', description: 'Katkı maddesi kullanmadan, en kaliteli ve taze malzemelerle üretim yapıyoruz. Doğallığın tadına varın.', accent: 'from-emerald-500/10' },
-  { icon: Shield, title: 'Hijyen Garantisi', description: 'Gıda güvenliği standartlarına uygun, hijyenik üretim tesislerinde her aşama kontrollü olarak hazırlanır.', accent: 'from-blue-500/10' },
-  { icon: Award, title: 'Geleneksel Tarifler', description: 'Anadolu\'nun yüzyıllık tariflerini koruyarak modern sofralara sunuyoruz. Her lokmada gelenek.', accent: 'from-amber-500/10' },
-  { icon: Truck, title: 'Soğuk Zincir Teslimat', description: 'Frigolu araçlarla tüm Türkiye\'ye soğuk zincir garantili teslimat. Lezzet kapınıza kadar.', accent: 'from-cyan-500/10' },
-  { icon: Users, title: 'Kurumsal & Bireysel', description: 'Bireysel müşterilerden restoranlar ve kafelere, herkese özel çözümler sunuyoruz.', accent: 'from-purple-500/10' },
+  { icon: Heart, title: 'El Yapımı Üretim', description: 'Fabrika üretimi değil, gerçek el emeği. Her su böreği yufkası oklavayla tek tek açılır, her baklava katmanı elle serilir. Annelerimizden ve ninelerimizden öğrendiğimiz tariflere sadık kalarak, sevgiyle üretiyoruz.', accent: 'from-rose-500/10' },
+  { icon: Leaf, title: '%100 Doğal Malzeme', description: 'Ürünlerimizde katkı maddesi, koruyucu, yapay aroma veya renklendirici kesinlikle bulunmaz. Taze süzme peynir, gerçek tereyağı, birinci sınıf Antep fıstığı — sadece doğanın sunduğu en kaliteli malzemeler.', accent: 'from-emerald-500/10' },
+  { icon: Shield, title: 'Hijyen & Gıda Güvenliği', description: 'ISO standartlarına uygun üretim tesisimizde her aşama kontrol altındadır. Hammadde girişinden ambalajlamaya kadar tüm süreçlerde hijyen protokollerimiz titizlikle uygulanır.', accent: 'from-blue-500/10' },
+  { icon: Award, title: '65 Yıllık Gelenek', description: '1960\'dan bu yana üç nesil boyunca aynı tariflerle üretim yapıyoruz. Anadolu mutfağının yüzyıllık birikimini modern standartlarla harmanlayarak sofralarınıza taşıyoruz. Her lokmada tarih var.', accent: 'from-amber-500/10' },
+  { icon: Truck, title: 'Soğuk Zincir Teslimat', description: 'Frigolu soğutmalı araçlarımızla İstanbul\'dan tüm Türkiye\'nin 81 iline teslimat yapıyoruz. Ürünleriniz üretim tesisimizden evinize kadar -18°C\'de, soğuk zincir asla kırılmadan ulaşır.', accent: 'from-cyan-500/10' },
+  { icon: Users, title: 'Bireysel & Kurumsal Hizmet', description: 'Evlerinize tek tepsi börek göndermekten, restoran ve otellere düzenli toptan teslimat yapmaya kadar her ölçekte hizmet veriyoruz. B2B müşterilerimize özel fiyatlandırma ve ödeme koşulları sunuyoruz.', accent: 'from-purple-500/10' },
 ]
 
 export default function WhyOklavia() {
@@ -50,7 +50,7 @@ export default function WhyOklavia() {
             Neden <span className="text-gold-gradient">OKLAVİA?</span>
           </h2>
           <p className="text-cream-200/40 text-sm max-w-lg mx-auto mt-4 mb-6">
-            Kalite, gelenek ve güven — her ürünümüzde bu üç değeri bir arada sunuyoruz
+            Neden binlerce aile ve işletme OKLAVİA'yı tercih ediyor? İşte 65 yıldır değişmeyen altı sebebimiz
           </p>
           <OttomanDivider />
         </AnimateIn>

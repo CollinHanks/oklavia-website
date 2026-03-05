@@ -6,18 +6,18 @@ import { OttomanDivider, OttomanTulip, OttomanMedallion, OttomanFloral, OttomanR
 import AnimateIn from '@/components/ui/AnimateIn'
 
 const values = [
-  { icon: Target, title: 'Misyonumuz', text: 'Anadolu mutfağının geleneksel lezzetlerini, en yüksek kalite ve hijyen standartlarında üreterek her sofraya ulaştırmak.', accent: 'from-blue-500/10' },
-  { icon: Eye, title: 'Vizyonumuz', text: 'Türk mutfak kültürünün en güvenilir temsilcisi olarak, geleneksel tarifleri gelecek nesillere aktaran bir marka olmak.', accent: 'from-gold-500/10' },
-  { icon: Heart, title: 'Değerlerimiz', text: 'Geleneksel tariflerden şaşmadan, doğal malzemelerle, sevgiyle üretmek ve müşteri memnuniyetini her şeyin önünde tutmak.', accent: 'from-rose-500/10' },
+  { icon: Target, title: 'Misyonumuz', text: 'Anadolu mutfağının nesillerdir süregelen lezzetlerini, en yüksek kalite ve hijyen standartlarında üreterek Türkiye\'nin dört bir köşesindeki sofrara ulaştırmak. Geleneksel tarifleri bozmadan, modern gıda güvenliği standartlarıyla harmanlayarak her müşterimize güvenle sunmak.', accent: 'from-blue-500/10' },
+  { icon: Eye, title: 'Vizyonumuz', text: 'Türk mutfak kültürünün en güvenilir temsilcisi olarak, yurt içi ve yurt dışında tanınan bir marka olmak. Geleneksel tarifleri gelecek nesillere aktarırken, sürdürülebilir üretim pratikleriyle çevreye ve topluma katkıda bulunmak.', accent: 'from-gold-500/10' },
+  { icon: Heart, title: 'Değerlerimiz', text: 'İnsana ve doğaya saygı, ürünlerimizin temelini oluşturur. Katkı maddesi kullanmama sözümüzden asla taviz vermeyiz. Müşteri memnuniyeti, şeffaflık ve dürüstlük iş yapma biçimimizin ayrılmaz parçasıdır. Her ürünümüzü kendi ailemize yedireceğimiz özenle hazırlarız.', accent: 'from-rose-500/10' },
 ]
 
 const timeline = [
-  { year: '1960', title: 'Kuruluş', desc: 'İstanbul\'da geleneksel lezzetlerin hikayesi başladı. El yapımı su böreği ile yola çıktık.' },
-  { year: '1985', title: 'Büyüme', desc: 'Nesilden nesile aktarılan tariflerle ürün yelpazemizi genişlettik. Fıstıklı baklava ailemize katıldı.' },
-  { year: '2005', title: 'Modern Tesis', desc: 'Başakşehir\'de hijyenik üretim tesisimizi kurduk. Geleneksel tarifleri modern standartlarla buluşturduk.' },
-  { year: '2020', title: 'Türkiye Geneli', desc: 'Soğuk zincir teslimat ağımızı 81 ile yaydık. Frigolu araç filomuz büyüdü.' },
-  { year: '2024', title: 'Dijitalleşme', desc: 'Online sipariş altyapımızı güçlendirdik. Türk kahvesini ürün yelpazemize ekledik.' },
-  { year: '2025', title: 'Yeni Dönem', desc: 'Yeni hedefler, yeni ürünler. OKLAVİA olarak büyümeye devam ediyoruz.' },
+  { year: '1960', title: 'Kuruluş', desc: 'İstanbul\'da küçük bir aile mutfağında el yapımı su böreği üretimine başladık. Nesilden nesile aktarılan tariflerle ilk adımlarımızı attık.' },
+  { year: '1985', title: 'Ürün Çeşitliliği', desc: 'İkinci nesil devraldığında tereyağlı su böreği ve fıstıklı baklavayı ürün yelpazemize kattık. Müşteri portföyümüz restoranlar ve kafelere genişledi.' },
+  { year: '2005', title: 'Modern Tesis', desc: 'Başakşehir\'de ISO standartlarına uygun hijyenik üretim tesisimizi hizmete açtık. Şok dondurma teknolojisi sayesinde dondurulmuş ürün hattımızı başlattık.' },
+  { year: '2020', title: '81 İle Teslimat', desc: 'Frigolu soğutmalı araç filomuzla soğuk zincir teslimat ağımızı tüm Türkiye\'ye yaydık. Online sipariş altyapımızı WhatsApp entegrasyonuyla güçlendirdik.' },
+  { year: '2024', title: 'Türk Kahvesi', desc: '%100 Arabica çekirdeklerden geleneksel kavurma yöntemiyle hazırlanan Türk kahvesini ürün ailemize kattık. B2B hizmetlerimizi kurumsal müşterilerimiz için genişlettik.' },
+  { year: '2025', title: 'Dijital Dönüşüm', desc: 'Yeni web sitemiz, güçlendirilmiş online sipariş altyapımız ve genişleyen ürün yelpazemizle OKLAVİA\'nın yeni dönemine giriyoruz.' },
 ]
 
 const stats = [
@@ -58,7 +58,7 @@ export default function HakkimizdaPage() {
             OKLAVİA <span className="text-gold-gradient">Hikayesi</span>
           </h1>
           <p className="text-cream-200/40 text-sm max-w-lg mx-auto mt-4 mb-6">
-            Bir oklava, bir hayal, bir lezzet yolculuğu
+            1960&apos;dan bu yana üç nesil boyunca aynı özenle üretilen geleneksel lezzetlerin hikayesi
           </p>
           <OttomanDivider />
         </AnimateIn>
@@ -91,23 +91,34 @@ export default function HakkimizdaPage() {
                 <p>
                   OKLAVİA, adını Anadolu mutfağının en kadim aracından alır: <strong className="text-gold-400 font-semibold">oklava</strong>.
                   Nesilden nesile aktarılan bu basit ama güçlü araç, hamuru inceltmenin, lezzeti katlamanın ve
-                  sevgiyi sofraya taşımanın sembolüdür.
+                  sevgiyi sofraya taşımanın sembolüdür. Bizim için oklava sadece bir mutfak aracı değil — bir aile
+                  mirası, bir yaşam felsefesi ve her ürünümüzün arkasındaki hikayedir.
                 </p>
                 <p>
-                  1960 yılında İstanbul&apos;da kurulan OKLAVİA, geleneksel Türk
-                  mutfağının en sevilen lezzetlerini modern standartlarda üretmek ve tüm Türkiye&apos;ye
-                  ulaştırmak amacıyla yola çıktı. Kurucularımız, annelerinden ve ninelerinden öğrendikleri
-                  tarifleri, hijyenik üretim tesislerinde aynı özen ve sevgiyle hayata geçiriyor.
+                  1960 yılında İstanbul&apos;da mütevazı bir aile mutfağında başlayan yolculuğumuz, bugün
+                  Başakşehir&apos;deki modern üretim tesisimize kadar uzandı. Üç kuşaktır aynı tarifleri
+                  kullanıyoruz — annelerimizin annelerinden öğrendiği, kağıda dökülmemiş ama ellerin hafızasına
+                  kazınmış tarifler. Bu tariflerde sır yoktur; sır, yıllarca tekrarlanan özendir.
                 </p>
                 <p>
-                  Her su böreğimizin katlarında, her baklavamızın şerbetinde ve her fincan Türk kahvesinde
-                  Anadolu&apos;nun binlerce yıllık mutfak kültürünü yaşatıyoruz. Ürünlerimizi dondurulmuş
-                  olarak saklayabilir, istediğiniz zaman sıcacık sofralarınızda sunabilirsiniz.
+                  Bugün OKLAVİA olarak dört temel ürün üretiyoruz: klasik <strong className="text-cream-100/70">su böreği</strong>,
+                  {' '}<strong className="text-cream-100/70">tereyağlı su böreği</strong>, Gaziantep&apos;in gururu
+                  {' '}<strong className="text-cream-100/70">fıstıklı baklava</strong> ve geleneksel
+                  {' '}<strong className="text-cream-100/70">Türk kahvesi</strong>. Her birini katkı maddesi kullanmadan,
+                  taze ve doğal malzemelerle, el emeğiyle üretiyoruz. Fabrika tipi seri üretim bizim işimiz değil —
+                  biz her ürüne tek tek emek veriyoruz.
                 </p>
                 <p>
-                  Frigolu soğutmalı araçlarımızla İstanbul&apos;dan tüm Türkiye&apos;ye soğuk zincir
-                  garantisiyle ulaşıyoruz. Bireysel müşterilerimizden restoranlar ve kafelere, toptan
-                  alıcılardan özel etkinliklere kadar herkese hizmet veriyoruz.
+                  Dondurulmuş ürünlerimiz, üretildiği gün şok dondurma yöntemiyle -18°C&apos;ye düşürülür ve
+                  bu sıcaklıkta frigolu soğutmalı araçlarımızla kapınıza kadar taşınır. Soğuk zincir hiçbir
+                  aşamada kırılmaz. Bu sayede evinizde fırına attığınızda, sanki o gün yapılmış gibi taze ve
+                  lezzetli bir ürün elde edersiniz.
+                </p>
+                <p>
+                  İstanbul&apos;dan tüm Türkiye&apos;nin 81 iline teslimat yapıyoruz. Bireysel müşterilerimizden
+                  restoran ve kafelere, otellerden catering firmalarına kadar her ölçekte hizmet sunuyoruz.
+                  Amacımız basit: Anadolu sofrasının eşsiz lezzetlerini, her kim olursanız olun, nerede
+                  olursanız olun, sofralarınıza taşımak.
                 </p>
               </div>
             </div>
