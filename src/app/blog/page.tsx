@@ -9,10 +9,12 @@ import AnimateIn from '@/components/ui/AnimateIn'
 import { getSupabase, type BlogPost } from '@/lib/supabase'
 
 const FALLBACK_POSTS = [
-  { id: '1', title: 'Evde Mükemmel Su Böreği Yapmanın Sırları', slug: 'evde-mukemmel-su-boregi-yapmanin-sirlari', excerpt: 'Ustalarımızdan öğrendiğimiz püf noktalarıyla evde profesyonel su böreği yapmanın tüm incelikleri.', category: 'tarifler' as const, author: 'OKLAVİA Mutfağı', published_at: '2025-02-15', cover_image: '/images/products/su-boregi-2.jpg' },
-  { id: '2', title: 'Türk Kahvesinin Tarihi ve Kültürel Önemi', slug: 'turk-kahvesinin-tarihi-ve-kulturel-onemi', excerpt: 'UNESCO Somut Olmayan Kültürel Miras Listesi\'nde yer alan Türk kahvesinin büyüleyici hikayesi.', category: 'hikayeler' as const, author: 'OKLAVİA', published_at: '2025-02-01', cover_image: '/images/blog/turk-kahvesi.jpg' },
-  { id: '3', title: 'OKLAVİA Artık Tüm Türkiye\'ye Teslimat Yapıyor!', slug: 'oklavia-artik-tum-turkiyeye-teslimat-yapiyor', excerpt: 'Soğuk zincir teslimat ağımızı genişlettik. Artık 81 ile frigolu araçlarımızla ulaşıyoruz.', category: 'duyurular' as const, author: 'OKLAVİA', published_at: '2025-01-20', cover_image: '/images/general/borek-melting.jpg' },
-  { id: '4', title: 'Fıstıklı Baklava: Antep\'ten Sofralarınıza', slug: 'fistikli-baklava-antepten-sofralariniza', excerpt: 'Fıstıklı baklavanın yüzyıllık serüveni, Antep fıstığının önemi ve baklavamızın hikayesi.', category: 'hikayeler' as const, author: 'OKLAVİA Mutfağı', published_at: '2025-01-10', cover_image: '/images/general/baklava-ottoman.jpg' },
+  { id: '1', title: 'Evde Mükemmel Su Böreği Yapmanın Sırları', slug: 'evde-mukemmel-su-boregi-yapmanin-sirlari', excerpt: 'Hamur yoğurma, oklavayla açma, haşlama ve katmerleme tekniklerini adım adım anlatıyoruz. Ustalarımızın püf noktalarıyla evde profesyonel su böreği yapın.', category: 'tarifler' as const, author: 'OKLAVİA Mutfağı', published_at: '2025-02-15', cover_image: '/images/products/su-boregi-2.jpg' },
+  { id: '2', title: 'Türk Kahvesinin Tarihi ve Kültürel Önemi', slug: 'turk-kahvesinin-tarihi-ve-kulturel-onemi', excerpt: 'Osmanlı sarayından kahvehanelere, UNESCO mirasından modern sofralara: 500 yıllık Türk kahvesi geleneğinin büyüleyici hikayesi ve kültürel önemi.', category: 'hikayeler' as const, author: 'OKLAVİA', published_at: '2025-02-01', cover_image: '/images/blog/turk-kahvesi.jpg' },
+  { id: '3', title: 'OKLAVİA Artık Tüm Türkiye\'ye Teslimat Yapıyor!', slug: 'oklavia-artik-tum-turkiyeye-teslimat-yapiyor', excerpt: 'İstanbul\'dan Hakkari\'ye 81 ile soğuk zincir garantisiyle teslimat! Frigolu araçlarımızla ürünleriniz -18°C\'de kapınıza kadar. Teslimat süreleri ve sipariş detayları.', category: 'duyurular' as const, author: 'OKLAVİA', published_at: '2025-01-20', cover_image: '/images/general/borek-melting.jpg' },
+  { id: '4', title: 'Fıstıklı Baklava: Antep\'ten Sofralarınıza', slug: 'fistikli-baklava-antepten-sofralariniza', excerpt: 'Fıstıklı baklavanın yüzyıllık serüveni, Osmanlı sarayından günümüze uzanan hikayesi ve Antep fıstığının baklavadaki önemi.', category: 'hikayeler' as const, author: 'OKLAVİA Mutfağı', published_at: '2025-01-10', cover_image: '/images/general/baklava-ottoman.jpg' },
+  { id: '5', title: 'Tereyağlı Su Böreği Neden Bu Kadar Seviliyor?', slug: 'tereyagli-su-boregi-neden-bu-kadar-seviliyor', excerpt: 'Klasik su böreğinin tereyağıyla buluşunca nasıl bambaşka bir lezzete dönüştüğünü, hangi tereyağının kullanılması gerektiğini ve en iyi servis önerilerini keşfedin.', category: 'tarifler' as const, author: 'OKLAVİA Mutfağı', published_at: '2025-03-01', cover_image: '/images/products/tereyagli-su-boregi.jpg' },
+  { id: '6', title: 'Dondurulmuş Börek Nasıl Pişirilir? Püf Noktaları', slug: 'dondurulmus-borek-nasil-pisirilir', excerpt: 'Dondurulmuş böreği mükemmel pişirmenin 5 altın kuralı: çözdürme, fırın sıcaklığı, yumurta sürme, süre kontrolü ve dinlendirme. Pratik ipuçları.', category: 'tarifler' as const, author: 'OKLAVİA Mutfağı', published_at: '2025-02-20', cover_image: '/images/products/su-boregi.jpg' },
 ]
 
 const categories = [
@@ -49,6 +51,8 @@ export default function BlogPage() {
             'turk-kahvesinin-tarihi-ve-kulturel-onemi': '/images/blog/turk-kahvesi.jpg',
             'oklavia-artik-tum-turkiyeye-teslimat-yapiyor': '/images/general/borek-melting.jpg',
             'fistikli-baklava-antepten-sofralariniza': '/images/general/baklava-ottoman.jpg',
+            'tereyagli-su-boregi-neden-bu-kadar-seviliyor': '/images/products/tereyagli-su-boregi.jpg',
+            'dondurulmus-borek-nasil-pisirilir': '/images/products/su-boregi.jpg',
           }
           // eslint-disable-next-line @typescript-eslint/no-explicit-any
           const postsWithImages = data.map((p: any) => ({
