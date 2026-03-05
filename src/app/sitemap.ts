@@ -17,5 +17,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/blog/fistikli-baklava-antepten-sofralariniza`, lastModified: new Date('2025-01-10'), changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/blog/tereyagli-su-boregi-neden-bu-kadar-seviliyor`, lastModified: new Date('2025-03-01'), changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/blog/dondurulmus-borek-nasil-pisirilir`, lastModified: new Date('2025-02-20'), changeFrequency: 'monthly', priority: 0.6 },
+    // Legal pages
+    { url: `${baseUrl}/yasal/kvkk`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${baseUrl}/yasal/gizlilik-politikasi`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${baseUrl}/yasal/cerez-politikasi`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${baseUrl}/yasal/kullanim-kosullari`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
   ]
 }

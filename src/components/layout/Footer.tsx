@@ -262,7 +262,24 @@ export default function Footer() {
       <div className="relative">
         <div className="h-px bg-linear-to-r from-transparent via-gold-500/20 to-transparent" />
 
-        <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row justify-between items-center gap-3">
+        {/* Legal links row */}
+        <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 pt-5 pb-2">
+          <div className="flex flex-wrap justify-center gap-x-5 gap-y-1">
+            {[
+              { label: 'KVKK Aydınlatma Metni', href: '/yasal/kvkk' },
+              { label: 'Gizlilik Politikası', href: '/yasal/gizlilik-politikasi' },
+              { label: 'Çerez Politikası', href: '/yasal/cerez-politikasi' },
+              { label: 'Kullanım Koşulları', href: '/yasal/kullanim-kosullari' },
+            ].map((link) => (
+              <Link key={link.href} href={link.href} className="text-cream-200/20 hover:text-gold-400/60 text-[11px] transition-colors">
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* Copyright row */}
+        <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 pb-5 flex flex-col sm:flex-row justify-between items-center gap-2">
           <p className="text-cream-200/30 text-xs flex items-center gap-1.5">
             © {new Date().getFullYear()} OKLAVİA Unlu Mamülleri. Tüm hakları saklıdır.
           </p>
