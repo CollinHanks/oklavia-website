@@ -35,7 +35,7 @@ export default function Footer() {
       <div className="h-20 bg-linear-to-b from-transparent via-navy-900/60 to-navy-900" />
 
       {/* Animated shimmer line - sweeping gold */}
-      <div className="relative h-[2px] overflow-hidden">
+      <div className="relative h-0.5 overflow-hidden">
         <div className="absolute inset-0 bg-linear-to-r from-transparent via-gold-500/15 to-transparent" />
         <motion.div
           animate={{ x: ['-100%', '200%'] }}
