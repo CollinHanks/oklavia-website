@@ -7,6 +7,7 @@ import { CONTACT } from '@/lib/constants'
 
 export default function WhatsAppButton() {
   const [showTooltip, setShowTooltip] = useState(false)
+  const [dismissed, setDismissed] = useState(false)
   const [visible, setVisible] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
@@ -23,22 +24,29 @@ export default function WhatsAppButton() {
     return () => clearTimeout(timer)
   }, [])
 
+  // Show tooltip once — never again after dismissed
   useEffect(() => {
-    if (visible && !isMobile) {
+    if (visible && !isMobile && !dismissed) {
       const tooltipTimer = setTimeout(() => setShowTooltip(true), 4000)
       return () => clearTimeout(tooltipTimer)
     }
-  }, [visible, isMobile])
+  }, [visible, isMobile, dismissed])
 
   if (!visible) return null
 
   const whatsappUrl = `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent('Merhaba, bilgi almak istiyorum.')}`
 
+  const handleDismiss = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    setShowTooltip(false)
+    setDismissed(true)
+  }
+
   return (
     <div className="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 flex flex-col items-end gap-3">
-      {/* Tooltip — desktop only */}
+      {/* Tooltip — desktop only, shows once */}
       <AnimatePresence>
-        {showTooltip && !isMobile && (
+        {showTooltip && !isMobile && !dismissed && (
           <motion.div
             initial={{ opacity: 0, y: 10, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -46,11 +54,8 @@ export default function WhatsAppButton() {
             className="relative bg-white rounded-2xl shadow-xl p-4 max-w-60"
           >
             <button
-              onClick={(e) => {
-                e.stopPropagation()
-                setShowTooltip(false)
-              }}
-              className="absolute -top-3 -right-3 w-8 h-8 rounded-full flex items-center justify-center text-white shadow-md transition-colors"
+              onClick={handleDismiss}
+              className="absolute -top-3 -right-3 w-8 h-8 rounded-full flex items-center justify-center text-white shadow-md hover:opacity-80 transition-opacity"
               style={{ background: 'linear-gradient(135deg, #D4AF37, #B8962E)' }}
             >
               <X size={14} />
@@ -72,7 +77,7 @@ export default function WhatsAppButton() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        {/* Gold pulse ring — big & smooth, hidden on hover */}
+        {/* Gold pulse ring */}
         {!isHovered && (
           <motion.span
             className="absolute inset-0 rounded-full pointer-events-none"
