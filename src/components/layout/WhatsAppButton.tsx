@@ -7,11 +7,11 @@ import { CONTACT } from '@/lib/constants'
 
 export default function WhatsAppButton() {
   const [showTooltip, setShowTooltip] = useState(false)
+  const [dismissed, setDismissed] = useState(false)
   const [visible, setVisible] = useState(false)
   const [isHovered, setIsHovered] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
-  // Detect mobile
   useEffect(() => {
     const check = () => setIsMobile(window.innerWidth < 768)
     check()
@@ -19,29 +19,34 @@ export default function WhatsAppButton() {
     return () => window.removeEventListener('resize', check)
   }, [])
 
-  // Show button after 2s
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 2000)
     return () => clearTimeout(timer)
   }, [])
 
-  // Show tooltip after 4s — only on desktop
+  // Show tooltip once — never again after dismissed
   useEffect(() => {
-    if (visible && !isMobile) {
+    if (visible && !isMobile && !dismissed) {
       const tooltipTimer = setTimeout(() => setShowTooltip(true), 4000)
       return () => clearTimeout(tooltipTimer)
     }
-  }, [visible, isMobile])
+  }, [visible, isMobile, dismissed])
 
   if (!visible) return null
 
   const whatsappUrl = `https://wa.me/${CONTACT.whatsapp}?text=${encodeURIComponent('Merhaba, bilgi almak istiyorum.')}`
 
+  const handleDismiss = (e: React.MouseEvent) => {
+    e.stopPropagation()
+    setShowTooltip(false)
+    setDismissed(true)
+  }
+
   return (
     <div className="fixed bottom-5 right-5 md:bottom-6 md:right-6 z-50 flex flex-col items-end gap-3">
-      {/* Tooltip — desktop only */}
+      {/* Tooltip — desktop only, shows once */}
       <AnimatePresence>
-        {showTooltip && !isMobile && (
+        {showTooltip && !isMobile && !dismissed && (
           <motion.div
             initial={{ opacity: 0, y: 10, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -49,11 +54,9 @@ export default function WhatsAppButton() {
             className="relative bg-white rounded-2xl shadow-xl p-4 max-w-60"
           >
             <button
-              onClick={(e) => {
-                e.stopPropagation()
-                setShowTooltip(false)
-              }}
-              className="absolute -top-3 -right-3 w-8 h-8 bg-navy-800 rounded-full flex items-center justify-center text-white hover:bg-navy-600 transition-colors shadow-md"
+              onClick={handleDismiss}
+              className="absolute -top-3 -right-3 w-8 h-8 rounded-full flex items-center justify-center text-white shadow-md hover:opacity-80 transition-opacity"
+              style={{ background: 'linear-gradient(135deg, #D4AF37, #B8962E)' }}
             >
               <X size={14} />
             </button>
@@ -63,7 +66,6 @@ export default function WhatsAppButton() {
             <p className="text-navy-600 text-xs mt-1">
               Sipariş ve bilgi için yazın
             </p>
-            {/* Arrow */}
             <div className="absolute -bottom-2 right-6 w-4 h-4 bg-white rotate-45 shadow-xl" />
           </motion.div>
         )}
@@ -75,17 +77,17 @@ export default function WhatsAppButton() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
       >
-        {/* Gold pulse ring — separate from button to avoid hover bug */}
+        {/* Gold pulse ring */}
         {!isHovered && (
           <motion.span
             className="absolute inset-0 rounded-full pointer-events-none"
             style={{
-              boxShadow: '0 0 0 0 rgba(212, 175, 55, 0.4)',
+              boxShadow: '0 0 0 0 rgba(212, 175, 55, 0.5)',
             }}
             animate={{
               boxShadow: [
-                '0 0 0 0 rgba(212, 175, 55, 0.4)',
-                '0 0 0 16px rgba(212, 175, 55, 0)',
+                '0 0 0 0 rgba(212, 175, 55, 0.5)',
+                '0 0 0 24px rgba(212, 175, 55, 0)',
               ],
             }}
             transition={{
@@ -104,7 +106,13 @@ export default function WhatsAppButton() {
           animate={{ scale: 1 }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="relative w-13 h-13 md:w-16 md:h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg shadow-[#25D366]/30 hover:shadow-[#25D366]/50 transition-shadow"
+          className="relative w-13 h-13 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-lg transition-shadow"
+          style={{
+            background: 'linear-gradient(135deg, #D4AF37, #B8962E)',
+            boxShadow: isHovered
+              ? '0 10px 40px rgba(212, 175, 55, 0.5)'
+              : '0 4px 20px rgba(212, 175, 55, 0.3)',
+          }}
           aria-label="WhatsApp ile iletişime geçin"
         >
           <svg className="w-7 h-7 md:w-8 md:h-8" viewBox="0 0 24 24" fill="white">
