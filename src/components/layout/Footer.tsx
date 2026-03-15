@@ -90,7 +90,12 @@ export default function Footer() {
               <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
                 href={`https://wa.me/${CONTACT.whatsapp}?text=Merhaba, sipariş vermek istiyorum.`}
                 target="_blank" rel="noopener noreferrer"
-                className="btn-whatsapp rounded-full px-6 py-3 text-sm flex items-center gap-2 flex-1 sm:flex-none justify-center shadow-lg shadow-green-900/30">
+                className="rounded-full px-6 py-3 text-sm flex items-center gap-2 flex-1 sm:flex-none justify-center text-white font-semibold"
+                style={{
+                  background: 'linear-gradient(135deg, #D4AF37, #B8962E)',
+                  boxShadow: '0 4px 20px rgba(212, 175, 55, 0.3)',
+                }}
+              >
                 WhatsApp ile Yazın
               </motion.a>
               <motion.a whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}
@@ -243,7 +248,6 @@ export default function Footer() {
               className="mt-6 relative overflow-hidden rounded-xl border border-gold-500/15"
             >
               <div className="absolute inset-0 bg-linear-to-r from-gold-500/4 via-gold-500/8 to-gold-500/4" />
-              {/* Shimmer sweep */}
               <motion.div
                 animate={{ x: ['-100%', '200%'] }}
                 transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut', repeatDelay: 2 }}
