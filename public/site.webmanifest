@@ -1,0 +1,21 @@
+{
+  "name": "OKLAVİA — Anadolu'nun Mirası, Sofralarınızın Tacı",
+  "short_name": "OKLAVİA",
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#0A1128",
+  "background_color": "#0A1128",
+  "display": "standalone"
+}
