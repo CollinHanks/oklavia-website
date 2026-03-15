@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Hakkımızda — OKLAVİA Hikayesi',
-  description: 'OKLAVİA Unlu Mamülleri — 1960\'dan bu yana geleneksel Türk lezzetlerini özenle üretiyoruz. Başakşehir İstanbul merkezli, 81 ile soğuk zincir teslimat.',
-  alternates: { canonical: '/hakkimizda' },
+  title: 'Hakkımızda — OKLAVİA | 1960\'dan Bu Yana Üç Neslin Lezzet Mirası',
+  description: 'OKLAVİA, 1960 yılında İstanbul\'da kurulan ve üç nesil boyunca aynı özenle sürdürülen geleneksel Türk lezzet markasıdır. El yapımı su böreği, tereyağlı su böreği, fıstıklı baklava ve Türk kahvesi. ISO sertifikalı üretim, soğuk zincir teslimat, 81 ile hizmet.',
+  keywords: 'oklavia hakkında, oklavia hikayesi, geleneksel börek üretimi, el yapımı su böreği, istanbul börek, türk gıda markası, 1960 kuruluş, üç nesil lezzet, soğuk zincir teslimat, ISO sertifikalı gıda',
   openGraph: {
-    title: 'OKLAVİA Hikayesi — 1960\'dan Bu Yana',
-    description: 'Bir oklava, bir hayal, bir lezzet yolculuğu. 65+ yıllık geleneksel tarifler.',
-    images: [{ url: '/images/general/hero-bg.jpg', width: 1600, height: 1030, alt: 'OKLAVİA Geleneksel Üretim' }],
+    title: 'Hakkımızda — OKLAVİA | 1960\'dan Bu Yana Üç Neslin Lezzet Mirası',
+    description: 'Bir oklavanın dönüşünden doğan marka: OKLAVİA. 1960\'dan bu yana İstanbul\'da el yapımı geleneksel lezzetler üretiyoruz.',
+    images: ['/images/general/hero-bg.jpg'],
   },
 }
 
