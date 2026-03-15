@@ -20,10 +20,10 @@ export const CONTACT = {
 } as const
 
 export const SOCIAL = {
-  instagram: 'https://www.instagram.com/oklavia2025',
-  facebook: 'https://www.facebook.com/oklavia.tr',
-  tiktok: 'https://www.tiktok.com/@oklavia.tr',
-  youtube: 'https://www.youtube.com/@oklavia.tr',
+  instagram: 'https://www.instagram.com/oklavia_tr',
+  facebook: 'https://www.facebook.com/oklavia_tr',
+  tiktok: 'https://www.tiktok.com/@oklavia_tr',
+  youtube: 'https://www.youtube.com/@oklavia_tr',
 } as const
 
 export const NAV_LINKS = [
